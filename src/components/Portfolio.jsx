@@ -4,7 +4,7 @@ import useAudio from '../utilities/useAudio';
 import PortfolioItem from './PortfolioItem';
 
 export default function Portfolio({isMuted}) {
-	const urlHover = "src/assets/hover.mp3"
+	const urlHover = "/hover.mp3"
 	const [playingHover, setPlayingHover] = useAudio(urlHover, isMuted);
   return (
 	<div className='flex flex-col md:flex-row items-center justify-center mx-10'>
