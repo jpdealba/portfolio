@@ -13,6 +13,9 @@ module.exports = {
       boxShadow: {
         darkCard: "0 20px 25px -5px rgba(105, 180, 219, 0.2)",
       },
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],

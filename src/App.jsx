@@ -7,11 +7,12 @@ import Mute from './components/Mute'
 import Portfolio from './components/Portfolio.jsx'
 
 function App() {
-	const [isMuted, setIsMuted] = useState(sessionStorage.getItem("muted") || false)
+	const [isMuted, setIsMuted] = useState(localStorage.getItem("mute"))
 
-	const toggleMute = () => {
-		sessionStorage.setItem("mute", !isMuted)
-		setIsMuted(!isMuted)
+  const toggleMute = () => {
+    var nextVal = isMuted == "true" ? "false" : "true"
+		localStorage.setItem("mute", nextVal)
+    setIsMuted(nextVal)
 	}
   return (
     <div className="App">
@@ -20,7 +21,7 @@ function App() {
         <Mute toggleMute={toggleMute} isMuted={isMuted} />
         <div>
           <Intro />
-          <Portfolio isMuted={isMuted} />
+          <Portfolio />
           {/* <Timeline />
           <Contact /> */}
         </div>

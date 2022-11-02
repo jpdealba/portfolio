@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
 	return (
     <footer className="p-4 rounded-lg shadow md:flex md:items-center 
-        md:justify-between md:p-6 bg-footer mt-5">
+        md:justify-between md:p-6 bg-footer mt-40">
         <span className="text-sm sm:text-center text-gray-200">
             © 2022 <a href="https://flowbite.com/"
                 className="hover:underline">Jpdealba</a>. All Rights Reserved.

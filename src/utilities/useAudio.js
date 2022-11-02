@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
 
-const useAudio = (url, isMuted) => {
+const useAudio = (url) => {
   const [audio, setAudio] = useState(new Audio(url));
   const [playing, setPlaying] = useState(false);
-  //   setPlaying(!playing);
 
   useEffect(() => {
-    !isMuted && playing && audio.play();
+    audio.volume = 0.3;
+  }, []);
+  useEffect(() => {
+    if (localStorage.getItem("mute") == "true") {
+    } else {
+      playing && audio.play();
+    }
   }, [playing]);
 
   useEffect(() => {
