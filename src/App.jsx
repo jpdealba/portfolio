@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './assets/input.css'
 import reactLogo from './assets/react.svg'
 import Footer from './components/Footer'
@@ -8,6 +8,14 @@ import Portfolio from './components/Portfolio.jsx'
 
 function App() {
 	const [isMuted, setIsMuted] = useState(localStorage.getItem("mute"))
+
+  useEffect(() => {
+    if (!localStorage.getItem("mute")) {
+      localStorage.setItem("mute", false)
+    }
+    setIsMuted(localStorage.getItem("mute"))
+  }, [])
+
 
   const toggleMute = () => {
     var nextVal = isMuted == "true" ? "false" : "true"

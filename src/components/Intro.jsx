@@ -5,11 +5,10 @@ function Intro() {
 	  <section
 		  id='intro'
 		  className='flex items-center justify-center flex-col pt-10 pb-6'>
-
+			<Name />
 		<div className='text-center'>
-			<h1 className='text-4xl md:text-5xl text-white mb-1 md:mb-3 font-bold'>
-				Juan Pablo
-			</h1>
+
+
 			<p className='text-base md:text-xl mb-3 font-medium self-center text-primary'>
 				Computer Science Engineer & Full Stack Developer
 			  </p>
@@ -34,6 +33,33 @@ function Intro() {
 		</div>
 	</section>
   );
+}
+
+
+const Name = () => {
+	const name = "Juan Pablo"
+	const letterArray = name.split('')
+	return (
+	<div className='flex flex-row text-center'>
+			{letterArray.map((value, index) => { return <Letter key={index} letter={value}/>})}
+	</div>
+  )
+}
+
+const Letter = ({ letter }) => {
+	if (letter == " ") {
+		return (
+			<div className='ml-3'></div>
+		)
+	}else
+		return (
+			<div
+				className={`
+					${letter} text-4xl md:text-5xl
+					mb-1 md:mb-3 font-bold text-white hover:cursor-default letterHover`}>
+				<p className=''>{letter}</p>
+			</div>   
+	)
 }
 
 export default Intro
