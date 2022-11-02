@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const useAudio = (url) => {
   const [audio, setAudio] = useState(new Audio(url));
@@ -8,16 +8,16 @@ const useAudio = (url) => {
     audio.volume = 0.3;
   }, []);
   useEffect(() => {
-    if (localStorage.getItem("mute") == "true") {
+    if (localStorage.getItem('mute') == 'true') {
     } else {
       playing && audio.play();
     }
   }, [playing]);
 
   useEffect(() => {
-    audio.addEventListener("ended", () => setPlaying(false));
+    audio.addEventListener('ended', () => setPlaying(false));
     return () => {
-      audio.removeEventListener("ended", () => setPlaying(false));
+      audio.removeEventListener('ended', () => setPlaying(false));
     };
   }, []);
 
