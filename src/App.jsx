@@ -9,10 +9,17 @@ import Portfolio from './components/Portfolio.jsx';
 
 function App() {
   const [isMuted, setIsMuted] = useState(localStorage.getItem('mute'));
-
+  const [darkTheme, setDarkTheme] = useState(false);
   useEffect(() => {
     if (!localStorage.getItem('mute')) {
       localStorage.setItem('mute', false);
+    }
+    if (localStorage.getItem('theme') == 'false') {
+      setDarkTheme(false);
+    } else if (localStorage.getItem('theme') == 'true') {
+      setDarkTheme(true);
+    } else {
+      setDarkTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
     }
     setIsMuted(localStorage.getItem('mute'));
   }, []);
@@ -23,13 +30,13 @@ function App() {
     setIsMuted(nextVal);
   };
   return (
-    <div className="App">
+    <div className={`App ${darkTheme ? 'dark' : 'light'}`}>
       <div
-        className="max-w-5x1 w11/12 mx-auto bg-background flex 
-                    flex-col justify-between min-h-screen">
+        className="max-w-5x1 w11/12 mx-auto bg-backgroundLight dark:bg-background flex 
+                    flex-col justify-between min-h-screen ">
         <Mute toggleMute={toggleMute} isMuted={isMuted} />
-        <div>
-          <Header />
+        <div className="">
+          <Header darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
           <Intro />
           <Portfolio />
           {/* <Timeline />

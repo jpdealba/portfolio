@@ -8,7 +8,7 @@ function Intro() {
         <p className="text-base md:text-xl mb-3 font-medium self-center text-primary">
           Computer Science Engineer & Full Stack Developer
         </p>
-        <p className="text-sm max-w-xl mb-6 mx-10 tlastc text-justify text-text">
+        <p className="text-sm max-w-xl mb-6 mx-10 tlastc text-justify textLight dark:text-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu nibh ut ante luctus
           tristique nec et elit. Nullam rutrum, magna dictum fermentum ornare, justo ante suscipit
           erat, quis condimentum ante tellus sit amet purus. Cras vel arcu tempus. justo ante
@@ -43,7 +43,7 @@ const Name = () => {
 const Letter = ({ letter }) => {
   const [style, setStyle] = useState(`
 					${letter} text-4xl md:text-5xl
-					mb-1 md:mb-3 font-bold text-white hover:cursor-default`);
+					mb-1 md:mb-3 font-bold text-background dark:text-white hover:cursor-default`);
   if (letter == ' ') {
     return <div className="ml-3"></div>;
   } else
@@ -51,7 +51,7 @@ const Letter = ({ letter }) => {
       <div
         onMouseEnter={() =>
           setStyle(
-            'letterHover text-4xl md:text-5xl mb-1 md:mb-3 font-bold text-white hover:cursor-default'
+            'letterHover text-4xl md:text-5xl mb-1 md:mb-3 font-bold text-background dark:text-white hover:cursor-default'
           )
         }
         className={style}>
