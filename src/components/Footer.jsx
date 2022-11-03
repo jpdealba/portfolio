@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer
-      className="p-4 rounded-lg shadow md:flex md:items-center 
+      className="p-4 rounded-t-lg shadow md:flex md:items-center 
         md:justify-between md:p-6 bg-secondary mt-40">
       <span className="text-sm sm:text-center text-gray-200">
         © 2022{' '}

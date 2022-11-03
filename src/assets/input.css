@@ -91,44 +91,64 @@
 
 @keyframes up {
   0% {
-    transform: translateY(0px)
+    transform: translateY(0px);
   }
 
   10% {
-    transform: translateY(-10px)
+    transform: translateY(-10px);
   }
 
   20% {
-    transform: translateY(-30px)
+    transform: translateY(-30px);
   }
 
   40% {
-    transform: translateY(0px)
+    transform: translateY(0px);
   }
 
   50% {
-    transform: translateY(-20px)
+    transform: translateY(-20px);
   }
 
   60% {
-    transform: translateY(0px)
+    transform: translateY(0px);
   }
 
   70% {
-    transform: translateY(-10px)
+    transform: translateY(-10px);
   }
 
   80% {
-    transform: translateY(0px)
+    transform: translateY(0px);
   }
 
   90% {
-    transform: translateY(-5px)
+    transform: translateY(-5px);
   }
 
   100% {
-    transform: translateY(0px)
+    transform: translateY(0px);
   }
 }
 
 /* On hover letter */
+
+/* Rotate card */
+.rotateInfo {
+  transition: transform 0.8s;
+  transform: rotateY(180deg);
+}
+
+.rotateCardFirst {
+  transition: transform 0.8s;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+
+.rotateCardSecond {
+  transition: transform 0.8s;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+
+/* Rotate card */

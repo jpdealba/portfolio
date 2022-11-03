@@ -32,8 +32,7 @@ function App() {
   return (
     <div className={`App ${darkTheme ? 'dark' : 'light'}`}>
       <div
-        className="max-w-5x1 w11/12 mx-auto bg-backgroundLight dark:bg-background flex 
-                    flex-col justify-between min-h-screen ">
+        className="bg-backgroundLight dark:bg-background flex-col  ">
         <Mute toggleMute={toggleMute} isMuted={isMuted} />
         <div className="">
           <Header darkTheme={darkTheme} setDarkTheme={setDarkTheme} />

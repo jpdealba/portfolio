@@ -6,8 +6,7 @@ export default [
     workUrl: 'https://fkcodes.com',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
-      Maecenas id sem nec nulla laoreet varius. Nunc non venenatis tellus. \
-      Vivamus vel rutrum nulla, eu rutrum mi. Quisque consectetur'
+      Maecenas id sem nec nulla laoreet varius. Nunc non venenatis tellus. '
   },
   {
     title: 'Developer Portfolio',
@@ -16,8 +15,7 @@ export default [
     workUrl: '#',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
-      Maecenas id sem nec nulla laoreet varius. Nunc non venenatis tellus. \
-      Vivamus vel rutrum nulla, eu rutrum mi. Quisque consectetur'
+      Maecenas id sem nec nulla laoreet varius. Nunc non venenatis tellus.'
   },
   {
     title: 'AI Nerf Gun',
@@ -26,7 +24,6 @@ export default [
     workUrl: 'https://youtube.com',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
-      Maecenas id sem nec nulla laoreet varius. Nunc non venenatis tellus. \
-      Vivamus vel rutrum nulla, eu rutrum mi. Quisque consectetur'
+      Maecenas id sem nec nulla laoreet varius. Nunc non venenatis tellus.'
   }
 ];

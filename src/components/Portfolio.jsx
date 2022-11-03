@@ -7,8 +7,8 @@ export default function Portfolio({}) {
   const urlHover = '/hover.mp3';
   const [playingHover, setPlayingHover] = useAudio(urlHover);
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center mx-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+    <div className="flex flex-col md:flex-row items-center justify-center ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-auto">
         {portfolio.map((project) => (
           <PortfolioItem
             key={project.title}
