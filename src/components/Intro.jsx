@@ -18,8 +18,7 @@ function Intro() {
             href="https://youtube.com"
             target={'_blank'}
             className="text-primary hover:underline 
-					underline-offset-2 decoration-2 decoration-primary"
-          >
+					underline-offset-2 decoration-2 decoration-primary">
             Test
           </a>{' '}
           Donec pulvinar egestas auctor.
@@ -49,8 +48,7 @@ const Letter = ({ letter }) => {
       <div
         className={`
 					${letter} text-4xl md:text-5xl
-					mb-1 md:mb-3 font-bold text-white hover:cursor-default letterHover`}
-      >
+					mb-1 md:mb-3 font-bold text-white hover:cursor-default letterHover`}>
         <p className="">{letter}</p>
       </div>
     );

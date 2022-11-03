@@ -25,8 +25,7 @@ function App() {
     <div className="App">
       <div
         className="max-w-5x1 w11/12 mx-auto bg-background flex 
-                    flex-col justify-between min-h-screen"
-      >
+                    flex-col justify-between min-h-screen">
         <Mute toggleMute={toggleMute} isMuted={isMuted} />
         <div>
           <Intro />
