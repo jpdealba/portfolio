@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './assets/input.css';
 import reactLogo from './assets/react.svg';
 import Footer from './components/Footer';
+import Header from './components/Header';
 import Intro from './components/Intro.jsx';
 import Mute from './components/Mute';
 import Portfolio from './components/Portfolio.jsx';
@@ -28,6 +29,7 @@ function App() {
                     flex-col justify-between min-h-screen">
         <Mute toggleMute={toggleMute} isMuted={isMuted} />
         <div>
+          <Header />
           <Intro />
           <Portfolio />
           {/* <Timeline />

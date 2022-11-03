@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Intro() {
   return (
@@ -41,14 +41,20 @@ const Name = () => {
 };
 
 const Letter = ({ letter }) => {
+  const [style, setStyle] = useState(`
+					${letter} text-4xl md:text-5xl
+					mb-1 md:mb-3 font-bold text-white hover:cursor-default`);
   if (letter == ' ') {
     return <div className="ml-3"></div>;
   } else
     return (
       <div
-        className={`
-					${letter} text-4xl md:text-5xl
-					mb-1 md:mb-3 font-bold text-white hover:cursor-default letterHover`}>
+        onMouseEnter={() =>
+          setStyle(
+            'letterHover text-4xl md:text-5xl mb-1 md:mb-3 font-bold text-white hover:cursor-default'
+          )
+        }
+        className={style}>
         <p className="">{letter}</p>
       </div>
     );
