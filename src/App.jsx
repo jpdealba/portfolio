@@ -34,14 +34,12 @@ function App() {
       <div
         className="bg-backgroundLight dark:bg-background flex-col  ">
         <Mute toggleMute={toggleMute} isMuted={isMuted} />
-        <div className="">
+        <div className=" pb-40 ">
           <Header darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
           <Intro />
           <Portfolio />
-          {/* <Timeline />
-          <Contact /> */}
         </div>
-          <Footer />
+        <Footer />
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer
       className="p-4 rounded-t-lg shadow md:flex md:items-center 
-        md:justify-between md:p-6 bg-secondary mt-40">
+        md:justify-between md:p-6 bg-secondary b-0 absolute">
       <span className="text-sm sm:text-center text-gray-200">
         © 2022{' '}
         <a href="https://flowbite.com/" className="hover:underline">
