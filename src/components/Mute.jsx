@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Mute = ({ toggleMute, isMuted }) => {
   return (
-    <div className="fixed bottom-0 right-0 mr-5 mb-5 opacity-80">
+    <div className="fixed bottom-0 right-0 mr-5 mb-5 opacity-80 z-50">
       <button
         onClick={toggleMute}
         className="bg-primary hover:bg-secondary text-white 
