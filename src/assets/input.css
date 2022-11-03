@@ -7,6 +7,9 @@
   text-align-last: center;
 }
 
+html {
+  background-color: #424f7e;
+}
 /* align last element in paragraph to the center */
 
 /* Name animation on load */

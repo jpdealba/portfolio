@@ -30,7 +30,7 @@ function App() {
     setIsMuted(nextVal);
   };
   return (
-    <div className={`App ${darkTheme ? 'dark' : 'light'}`}>
+    <div className={`App ${darkTheme ? 'dark' : 'light'} bg-black h-screen`}>
       <div
         className="bg-backgroundLight dark:bg-background flex-col  ">
         <Mute toggleMute={toggleMute} isMuted={isMuted} />
