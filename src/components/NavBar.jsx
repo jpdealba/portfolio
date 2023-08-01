@@ -32,7 +32,7 @@ const NavBar = ({ darkTheme, setDarkTheme }) => {
     contactSection.scrollIntoView({ behavior: 'smooth' });
   };
   const changeScroll = () =>
-    document.body.scrollTop > 80 || document.documentElement.scrollTop > 80
+    document.body.scrollTop > 40 || document.documentElement.scrollTop > 40
       ? setScroll(true)
       : setScroll(false);
 
@@ -43,10 +43,10 @@ const NavBar = ({ darkTheme, setDarkTheme }) => {
 
   return (
     <div
-      className={`sticky 
-      items-center justify-between 
+      className={`fixed  w-full z-50
+      items-center justify-between transition-all duration-500
       flex px-4 h-16 bg-slate-100 dark:bg-[#171923]
-      ${scroll ? 'shadow-lg' : 'shadow-none'} `}>
+      ${scroll ? 'shadow-lg dark:shadow-teal/20 ' : 'shadow-none'} `}>
       <button onClick={scrollToHero} className="text-xl ">
         <div className="flex space-x-1">
           <TbLetterJ color={'#319795'} />
@@ -80,61 +80,8 @@ const NavBar = ({ darkTheme, setDarkTheme }) => {
         </div>
       </div>
     </div>
-    // <div
-    //   className="p-4 md:flex md:flex-row sm:flex-col
-    //     md:justify-between bg-secondary shadow-header ">
-    //   <div className="text-center">
-    //     <h1 className="text-text">JPDEALBA</h1>
-    //   </div>
-    //   <div className="divide-x flex-row flex divide-selected justify-center">
-    //     <ToggleTheme darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
-    //     <Icons />
-    //   </div>
-    // </div>
   );
 };
-
-// const ToggleTheme = ({ darkTheme, setDarkTheme }) => {
-//   const urlClick = 'https://css-tricks.com/examples/SoundOnHover/audio/beep.mp3';
-//   const [playingClick, setPlayingClick] = useAudio(urlClick, 0.2);
-//   return (
-//     <div className=" w-10 h-min rounded-xl self-center ">
-//       <button
-//         onClick={() => {
-//           setPlayingClick(!playingClick);
-//           onChange(!darkTheme);
-//           setDarkTheme(!darkTheme);
-//         }}
-//         className={`w-10 h-5 flex items-center justify-center ${
-//           darkTheme ? 'bg-sunRGBA ' : 'bg-backgroundRGBA'
-//         } self-center rounded-xl flow-root`}>
-//         <div
-//           className={`h-5 w-5 flex items-center justify-center scale-125 rounded-full ${
-//             darkTheme ? 'bg-background float-right' : 'bg-sun'
-//           } `}>
-//           <svg
-//             xmlns="http://www.w3.org/2000/svg"
-//             fill="none"
-//             viewBox="0 0 24 24"
-//             strokeWidth="1.5"
-//             stroke="currentColor"
-//             style={{ color: 'white' }}
-//             className="w-5 h-5 scale-90">
-//             <path
-//               strokeLinecap="round"
-//               strokeLinejoin="round"
-//               d={
-//                 darkTheme
-//                   ? 'M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z'
-//                   : 'M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z'
-//               }
-//             />
-//           </svg>
-//         </div>
-//       </button>
-//     </div>
-//   );
-// };
 
 const onChange = (value) => {
   localStorage.setItem('theme', value);

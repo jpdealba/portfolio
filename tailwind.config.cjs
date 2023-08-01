@@ -14,7 +14,7 @@ module.exports = {
         text: '#B8B7CD',
         textLight: '#514f72',
         backgroundLight: '#ececf1',
-        background: '#171831',
+        background: '#1A202C',
         darkenBackground: '#101123',
         backgroundRGBA: 'rgba(23, 24, 49, 0.6)',
         sun: '#FC9601',
