@@ -42,18 +42,18 @@ const Name = () => {
 
 const Letter = ({ letter }) => {
   const [style, setStyle] = useState(`
-					${letter} text-4xl md:text-5xl
+					J text-4xl md:text-5xl
 					mb-1 md:mb-3 font-bold text-background dark:text-white hover:cursor-default`);
   if (letter == ' ') {
     return <div className="ml-3"></div>;
   } else
     return (
       <div
-        onMouseEnter={() =>
-          setStyle(
-            'letterHover text-4xl md:text-5xl mb-1 md:mb-3 font-bold text-background dark:text-white hover:cursor-default'
-          )
-        }
+        // onMouseEnter={() =>
+        //   setStyle(
+        //     'letterHover text-4xl md:text-5xl mb-1 md:mb-3 font-bold text-background dark:text-white hover:cursor-default'
+        //   )
+        // }
         className={style}>
         <p className="">{letter}</p>
       </div>

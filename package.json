@@ -13,13 +13,23 @@
     "review": "npm run lint && npm run format"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@fontsource/roboto": "^4.5.8",
-    "@mui/icons-material": "^5.10.9",
-    "@mui/material": "^5.10.12",
+    "@chakra-ui/icons": "^2.0.17",
+    "@chakra-ui/react": "^2.5.1",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "get-average-color": "^0.0.6",
+    "bootstrap": "^5.2.3",
+    "framer-motion": "^10.0.0",
+    "fs": "^0.0.1-security",
+    "markdown-it": "^13.0.1",
+    "react-bootstrap": "^2.7.2",
+    "react-icons": "^4.7.1",
+    "react-intersection-observer": "^9.4.3",
+    "react-markdown": "^8.0.6",
+    "react-reveal": "^1.2.2",
     "react": "^18.2.0",
+    "remarkable": "^2.0.1",
+    "web-vitals": "^2.1.4",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

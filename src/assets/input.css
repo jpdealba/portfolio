@@ -2,156 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-/* align last element in paragraph to the center */
-.tlastc {
-  text-align-last: center;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  background-color: #424f7e;
-}
-/* align last element in paragraph to the center */
-
-/* Name animation on load */
-.J {
-  opacity: 0;
-  animation: drop 0.4s linear forwards;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
-.u {
-  opacity: 0;
-  animation: drop 0.4s linear forwards 0.2s;
+.App {
+  text-align: center;
 }
 
-.a {
-  opacity: 0;
-  animation: drop 0.4s linear forwards 0.4s;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.n {
-  opacity: 0;
-  animation: drop 0.4s linear forwards 0.6s;
-}
-
-.P {
-  opacity: 0;
-  animation: drop 0.4s linear forwards 0.8s;
-}
-
-.b {
-  opacity: 0;
-  animation: drop 0.4s linear forwards 0.12s;
-}
-
-.l {
-  opacity: 0;
-  animation: drop 0.4s linear forwards 0.14s;
-}
-
-.o {
-  opacity: 0;
-  animation: drop 0.6s linear forwards 0.16s;
-}
-
-@keyframes drop {
-  0% {
-    transform: translateY(-200px) scaleY(0.9);
-    opacity: 0;
-  }
-
-  5% {
-    opacity: 0.7;
-  }
-
-  50% {
-    transform: translateY(0px) scaleY(1);
-    opacity: 1;
-  }
-
-  65% {
-    transform: translateY(-17px) scaleY(0.9);
-    opacity: 1;
-  }
-
-  75% {
-    transform: translateY(-22px) scaleY(0.9);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(0px) scaleY(1);
-    opacity: 1;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
 }
 
-/* Name animation on load */
-
-/* On hover letter */
-.letterHover:hover {
-  opacity: 1;
-  animation: up 1s linear forwards;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-@keyframes up {
-  0% {
-    transform: translateY(0px);
-  }
-
-  10% {
-    transform: translateY(-10px);
-  }
-
-  20% {
-    transform: translateY(-30px);
-  }
-
-  40% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-20px);
-  }
-
-  60% {
-    transform: translateY(0px);
-  }
-
-  70% {
-    transform: translateY(-10px);
-  }
-
-  80% {
-    transform: translateY(0px);
-  }
-
-  90% {
-    transform: translateY(-5px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
+.App-link {
+  color: #61dafb;
 }
 
-/* On hover letter */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
 
-/* Rotate card */
-.rotateInfo {
-  transition: transform 0.8s;
-  transform: rotateY(180deg);
+  to {
+    transform: rotate(360deg);
+  }
 }
-
-.rotateCardFirst {
-  transition: transform 0.8s;
-  transform: rotateY(180deg);
-  transform-style: preserve-3d;
-}
-
-.rotateCardSecond {
-  transition: transform 0.8s;
-  transform: rotateY(0deg);
-  transform-style: preserve-3d;
-}
-
-/* Rotate card */
